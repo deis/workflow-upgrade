@@ -1,0 +1,10 @@
+package: github.com/deis/workflow-upgrade
+flatten: true
+ignore:
+  - k8s.io/kubernetes
+import:
+- package: k8s.io/client-go/1.4
+  version: 0b62e254fe853d89b1d8d3445bbdab11bcc11bc3
+- package: speter.net/go/exp/math/dec/inf
+  repo: https://github.com/belua/inf
+  vcs: git
