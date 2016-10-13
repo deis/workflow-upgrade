@@ -20,8 +20,6 @@ LDFLAGS := "-s -w -X main.version=${VERSION}"
 # Docker Root FS
 BINDIR := ./rootfs
 
-DEIS_REGISTRY ?= ${DEV_REGISTRY}/
-
 all:
 	@echo "Use a Makefile to control top-level building of the project."
 
@@ -40,7 +38,7 @@ build-binary:
 test:
 	${DEV_ENV_CMD} sh -c 'go test $$(glide nv)'
 
-docker-build: build-binary
+build: build-binary
 	docker build --rm -t ${IMAGE} rootfs
 	docker tag ${IMAGE} ${MUTABLE_IMAGE}
 

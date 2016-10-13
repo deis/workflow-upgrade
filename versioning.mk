@@ -1,6 +1,7 @@
 MUTABLE_VERSION ?= canary
 VERSION ?= git-$(shell git rev-parse --short HEAD)
 IMAGE_PREFIX ?= deis
+DEIS_REGISTRY ?= quay.io/
 
 IMAGE := ${DEIS_REGISTRY}${IMAGE_PREFIX}/${SHORT_NAME}:${VERSION}
 MUTABLE_IMAGE := ${DEIS_REGISTRY}${IMAGE_PREFIX}/${SHORT_NAME}:${MUTABLE_VERSION}
@@ -12,7 +13,7 @@ info:
 	@echo "Mutable tag:     ${MUTABLE_IMAGE}"
 
 .PHONY: docker-push
-docker-push: docker-immutable-push docker-mutable-push
+push: docker-immutable-push docker-mutable-push
 
 .PHONY: docker-immutable-push
 docker-immutable-push:
