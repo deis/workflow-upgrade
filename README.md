@@ -1,3 +1,9 @@
+
+|![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Warning.svg/156px-Warning.svg.png) | Deis Workflow will soon no longer be maintained.<br />Please [read the announcement](https://deis.com/blog/2017/deis-workflow-final-release/) for more detail. |
+|---:|---|
+| 09/07/2017 | Deis Workflow [v2.18][] final release before entering maintenance mode |
+| 03/01/2018 | End of Workflow maintenance: critical patches no longer merged |
+
 # Workflow Upgrade
 [![Docker Repository on Quay](https://quay.io/repository/deisci/workflow-upgrade/status "Docker Repository on Quay")](https://quay.io/repository/deisci/workflow-upgrade)
 
@@ -15,3 +21,4 @@ Workflow Upgrade will be run as kubernetes job after a successful upgrade of the
 [issues]: https://github.com/deis/workflow/issues
 [prs]: https://github.com/deis/workflow/pulls
 [daemons]: http://kubernetes.io/docs/admin/daemons/
+[v2.18]: https://github.com/deis/workflow/releases/tag/v2.18.0
